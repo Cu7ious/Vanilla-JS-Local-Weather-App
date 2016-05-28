@@ -117,11 +117,11 @@ window.onload = function() {
     var timeStamp = localStorage.getItem('timeStamp');
     var timeDifference = Math.floor((new Date() - new Date(timeStamp)) / 60000);
 
-    console.log("Query was cached. Time to the next refresh: " + (10 - timeDifference) + " minutes.")
 
     if (!weaterData ||  timeDifference > CACHE_TIME) {
       getCurrentWeater()
     } else {
+      console.log("Query was cached. Time to the next refresh: " + (10 - timeDifference) + " minutes.")
       runUI(weaterData);
     }
   })();
