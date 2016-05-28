@@ -1,0 +1,20 @@
+{
+  "name": "breacher",
+  "version": "1.0.0",
+  "description": "A breakthrough for the Corporate World",
+  "main": "index.html",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "node-sass": "^3.3.3",
+    "npm-run-all": "^1.4.0"
+  },
+  "scripts": {
+    "run-express": "node server.js",
+    "build-sass": "node-sass assets/stylesheets/_bootstrap.scss assets/css/style.css",
+    "watch-sass": "nodemon -e scss -w assets/stylesheets -x 'npm run build-sass' "
+  },
+  "author": "Cu7ious",
+  "license": "SEE LICENSE IN LICENSE FILE"
+}
